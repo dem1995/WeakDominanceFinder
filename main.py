@@ -63,9 +63,6 @@ def find_row_dominations(rows):
         while (len(other_vectors)<5):
           other_vectors.append([0.5* m for m in other_vectors[k]])
           other_vectors=remove_duplicates(other_vectors)
-        print(current_vector)
-        print(other_vectors)
-        print(in_hull(current_vector, other_vectors))
         if (in_hull(current_vector, other_vectors)):
           dominated_rows.append([i, indices])
   return dominated_rows
